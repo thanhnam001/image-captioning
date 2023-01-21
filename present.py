@@ -64,6 +64,8 @@ def predict(image_name, feature_extract, model, tokenizer, max_len, start_token 
             output += ' ' + token
             if token == end_token:
                 break
+        else:
+            break
     return output
 
 @st.cache(allow_output_mutation=True)
